@@ -4,7 +4,8 @@ ddb.Compose({
 	services: {
 		db: ddb.Image("postgres")
 		  {
-		    environment+: {POSTGRES_PASSWORD: "ddb"}
+		    environment+: {POSTGRES_PASSWORD: "ddb"},
+		    volumes+: ['db-data:/var/lib/postgresql/data']
 		  }
     }
 })
