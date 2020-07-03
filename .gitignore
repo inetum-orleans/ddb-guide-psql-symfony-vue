@@ -1,0 +1,4 @@
+###> gfi-centre-ouest/docker-devbox ###
+docker-compose.yml
+*ddb.local.*
+###< gfi-centre-ouest/docker-devbox ###
