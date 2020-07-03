@@ -1,4 +1,6 @@
 ###> gfi-centre-ouest/docker-devbox ###
 docker-compose.yml
 *ddb.local.*
+.bin/psql
+.bin/pg_dump
 ###< gfi-centre-ouest/docker-devbox ###
