@@ -14,6 +14,8 @@ ddb.Compose({
 		  },
     php: ddb.Build("php") +
          ddb.User() +
+         ddb.Binary("composer", "/var/www/html", "composer") +
+         ddb.Binary("php", "/var/www/html", "php") +
          {
           volumes+: [
              ddb.path.project + ":/var/www/html",

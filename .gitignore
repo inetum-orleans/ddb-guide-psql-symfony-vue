@@ -7,4 +7,6 @@ docker-compose.yml
 .docker/postgres/Dockerfile
 .docker/php/Dockerfile
 .docker/php/fixuid.tar.gz
+.bin/composer
+.bin/php
 ###< gfi-centre-ouest/docker-devbox ###
