@@ -11,6 +11,15 @@ ddb.Compose({
           'db-data:/var/lib/postgresql/data',
           ddb.path.project + ':/project'
 		    ]
-		  }
-    }
+		  },
+    php: ddb.Build("php") +
+         ddb.User() +
+         {
+          volumes+: [
+             ddb.path.project + ":/var/www/html",
+             "php-composer-cache:/composer/cache",
+             "php-composer-vendor:/composer/vendor"
+          ]
+         }
+    },
 })

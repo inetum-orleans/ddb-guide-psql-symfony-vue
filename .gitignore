@@ -5,4 +5,6 @@ docker-compose.yml
 .bin/pg_dump
 .docker/postgres/fixuid.tar.gz
 .docker/postgres/Dockerfile
+.docker/php/Dockerfile
+.docker/php/fixuid.tar.gz
 ###< gfi-centre-ouest/docker-devbox ###
