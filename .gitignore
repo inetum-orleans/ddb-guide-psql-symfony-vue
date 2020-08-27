@@ -9,4 +9,8 @@ docker-compose.yml
 .docker/php/fixuid.tar.gz
 .bin/composer
 .bin/php
+.docker/web/apache.conf
+.docker/web/Dockerfile
+.certs/api.ddb-quickstart.test.key
+.certs/api.ddb-quickstart.test.crt
 ###< gfi-centre-ouest/docker-devbox ###

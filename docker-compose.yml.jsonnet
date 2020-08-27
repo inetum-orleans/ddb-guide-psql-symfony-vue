@@ -1,5 +1,10 @@
 local ddb = import 'ddb.docker.libjsonnet';
 
+local domain_ext = std.extVar("core.domain.ext");
+local domain_sub = std.extVar("core.domain.sub");
+
+local domain = std.join('.', [domain_sub, domain_ext]);
+
 ddb.Compose({
 	services: {
 		db: ddb.Build("postgres") + ddb.User() +
@@ -22,6 +27,14 @@ ddb.Compose({
              "php-composer-cache:/composer/cache",
              "php-composer-vendor:/composer/vendor"
           ]
-         }
+         },
+    web: ddb.Build("web") +
+         ddb.VirtualHost("80", std.join('.', ['api', domain]))
+         {
+              volumes+: [
+                 ddb.path.project + ":/var/www/html",
+                 ddb.path.project + "/.docker/web/apache.conf:/usr/local/apache2/conf/custom/apache.conf",
+              ]
+         },
     },
 })
