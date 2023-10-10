@@ -1,11 +1,11 @@
-FROM php:7.3-fpm
+FROM php:8.2-fpm
 
 RUN yes | pecl install xdebug && docker-php-ext-enable xdebug
 
-RUN apt-get update -y &&\
- apt-get install -y libpq-dev &&\
- rm -rf /var/lib/apt/lists/* &&\
- docker-php-ext-install pdo pdo_pgsql
+RUN apt-get update && apt-get install -y \
+libpq-dev \
+&& docker-php-ext-install pdo pdo_pgsql
+RUN rm -rf /var/lib/apt/lists/*
 
 ENV COMPOSER_HOME /composer
 ENV PATH /composer/vendor/bin:$PATH
