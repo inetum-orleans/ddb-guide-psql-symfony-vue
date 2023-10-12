@@ -28,4 +28,4 @@ composer install
 
 That's all.
 
-Go to https://api.ddb-example.test you should see the welcome page of Symfony
+Go to https://api.ddb-quickstart.test you should see the welcome page of Symfony
