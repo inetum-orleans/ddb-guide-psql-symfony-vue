@@ -21,6 +21,7 @@ ddb.Compose({
          ddb.User() +
          ddb.Binary("composer", "/var/www/html", "composer") +
          ddb.Binary("php", "/var/www/html", "php") +
+         ddb.XDebug() +
          {
           volumes+: [
              ddb.path.project + ":/var/www/html",

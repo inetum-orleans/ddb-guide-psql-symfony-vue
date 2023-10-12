@@ -13,4 +13,7 @@ docker-compose.yml
 .docker/web/Dockerfile
 .certs/api.ddb-quickstart.test.key
 .certs/api.ddb-quickstart.test.crt
+/.certs/.signer.crt
+/.bash_enter
+/.bash_leave
 ###< gfi-centre-ouest/docker-devbox ###
